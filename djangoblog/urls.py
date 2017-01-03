@@ -20,6 +20,7 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^donut/', include('donut.urls')),
+    url(r'^$', include('core.urls')),
 ]
 
 #url goes to the donut app folder, looks for urls.py, finds the first url pattern
