@@ -1,0 +1,7 @@
+{% extends "core/header.html"%}
+
+{% block content%}
+<h2>{{post.title}}</h2>
+<h4>on {{post.date}}</h4>
+{{post.body|linebreaks}}
+{% endblock %}
