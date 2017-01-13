@@ -25,8 +25,8 @@ SECRET_KEY = '*igt1j)!v43^#n)d%l%ay*2of#q91adm=ph_=x6^av7lxswobh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['morning-hollows-85937.herokuapp.com'] 
 
 # Application definition
 
@@ -84,10 +84,13 @@ DATABASES = {
         'USER': 'ubuntu',
         'PASSWORD': 'psqlword',
         'HOST': 'localhost',
-        'PORT': ''
+        'PORT': '5432'
     }
 }
 
+import dj_database_url
+
+DATABASES['default'] = dj_database_url.config()
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -136,3 +139,11 @@ STATICFILES_DIRS = (
 )
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+
+
+
