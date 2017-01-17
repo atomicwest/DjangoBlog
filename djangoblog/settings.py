@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'blog',
     'core',
     'donut',
+    'gameTest',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -90,7 +91,11 @@ DATABASES = {
 
 import dj_database_url
 
+# comment out the line below if there is a settings.DATABASE NAME error
 DATABASES['default'] = dj_database_url.config()
+
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASE_URL = 'postgresql://postgresql'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators

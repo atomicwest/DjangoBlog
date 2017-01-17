@@ -1,0 +1,24 @@
+{% extends "core/header.html" %}
+
+{% block content %}
+
+<h2 align="center">Leaderboard</h2>
+
+<table width="100%" border="2">
+    <tr>
+        <th>Name</th>
+        <th>Score</th>
+        <th>Date</th>
+        <th>Last Words</th>
+    </tr>
+    
+    <tr>
+        <td>{{entry.name}}</td>
+        <td>{{entry.score}}</td>
+        <td>{{entry.date}}</td>
+        <td>{{entry.quote}}</td>
+    </tr>
+    
+</table>
+
+{% endblock %}
